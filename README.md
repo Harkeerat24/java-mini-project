@@ -29,8 +29,8 @@ The application follows a modular architecture to ensure separation of concerns:
 
 1.  **Clone the Repository**:
     ```bash
-    git clone git@github.com:harsh-aghara/java_mini_project.git
-    cd java_mini_project
+    git clone git@github.com:harsh-aghara/java-mini-project.git
+    cd java-mini-project
     ```
 
 2.  **Compile the Source Code**:
