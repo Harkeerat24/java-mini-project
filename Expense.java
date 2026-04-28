@@ -78,8 +78,8 @@ public class Expense extends AbstractExpense implements Taggable {
 
     // ── Factory ───────────────────────────────────────────────────────────────
     public static Expense fromCSVString(String csvLine) {
-        if (csvLine == null || csvLine.trim().isEmpty()) return null;
-        String[] parts = csvLine.split(",");
+        // Split into max 5 parts to handle commas in description
+        String[] parts = csvLine.split(",", 5);
         if (parts.length != 5) return null;
         try {
             return new Expense(

@@ -17,11 +17,12 @@ public class ExpenseManager {
         this.nextId        = expenses.stream().mapToInt(Expense::getId).max().orElse(0) + 1;
     }
 
-    private void save() { FileHandler.saveExpenses(expenses); }
-
-    // ── Lookup ────────────────────────────────────────────────────────────────
-    public Expense findById(int id) {
-        return expenses.stream().filter(e -> e.getId() == id).findFirst().orElse(null);
+    private int calculateNextId() {
+        // Find the highest existing ID, or start at 1 if no expenses exist
+        return expenses.stream()
+                .mapToInt(Expense::getId)
+                .max()
+                .orElse(0) + 1;
     }
 
     // ── CRUD ──────────────────────────────────────────────────────────────────
