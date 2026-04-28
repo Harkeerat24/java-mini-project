@@ -20,14 +20,9 @@ public class Main {
                 case 4: deleteExpense();      break;
                 case 5: manageBudget();       break;
                 case 6: viewSortedExpenses(); break;
-                case 7: viewByMonth(); break;
-                case 8: viewByCategory(); break;
-                case 9:
-                    System.out.println("Exiting... Goodbye!");
-                    scanner.close();
-                    return;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
+                case 7: viewByMonth();        break;
+                case 8: viewByCategory();     break;
+                case 9: System.out.println("Exiting... Goodbye!"); running = false; break;
             }
         }
     }
